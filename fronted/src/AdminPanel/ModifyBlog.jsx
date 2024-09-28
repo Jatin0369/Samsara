@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import './ModifyBlog.css'
 import axios from "axios";
+import baseUrl from "../baseUrl";
 
 const UpdateBlogForm = ({ blog, setSelectedBlog, refreshBlogs }) => {
     const [formData, setFormData] = useState({
@@ -38,7 +39,7 @@ const UpdateBlogForm = ({ blog, setSelectedBlog, refreshBlogs }) => {
     // Handle form submission
     const handleSubmit = (e) => {
       e.preventDefault();
-      axios.put(`http://localhost:5000/api/blog/updateblog${blog._id}`, formData)
+      axios.put(`${baseUrl}/api/blog/updateblog${blog._id}`, formData)
         .then(() => {
           alert('Blog updated successfully!');
           setSelectedBlog(null); // Optionally, reset the form after update
@@ -129,7 +130,7 @@ function ModifyBlog() {
       useEffect(() => {
         const fetchBlogs = async () => {
           try {
-            const response = await axios.get('http://localhost:5000/api/blog/getallblogs');  // Your API endpoint
+            const response = await axios.get(`${baseUrl}/api/blog/getallblogs`);  // Your API endpoint
             setBlogs(response.data);
             // console.log(response.data)
           } catch (error) {
@@ -144,7 +145,7 @@ function ModifyBlog() {
     
       const fetchBlogs = async () => {
         try {
-          const response = await axios.get('http://localhost:5000/api/blog/getallblogs');
+          const response = await axios.get(`${baseUrl}/api/blog/getallblogs`);
           setBlogs(response.data);
         } catch (error) {
           setError('Error fetching blogs');
@@ -158,7 +159,7 @@ function ModifyBlog() {
 
     const handleDelete = async (blogId) => {
         try {
-          const response = await axios.delete(`http://localhost:5000/api/blog/deleteblog${blogId}`);
+          const response = await axios.delete(`${baseUrl}/api/blog/deleteblog${blogId}`);
         //   console.log(response)
           if (response.data.success) {
             // Fetch updated blog list after deletion

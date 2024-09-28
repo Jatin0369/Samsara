@@ -6,6 +6,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import { format } from "date-fns";
 import { useLocation, useParams } from "react-router-dom";
 import axios from "axios";
+import baseUrl from "../baseUrl";
 
 function DropdownCard({ question, answer }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,7 +45,7 @@ function TourDetails() {
     const fetchTourDetails = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/tours/${id}`
+          `${baseUrl}/api/tours/${id}`
         );
         console.log("this is response data-> ", response.data.tour);
         setTour(response.data.tour); // Adjust based on your API response structure

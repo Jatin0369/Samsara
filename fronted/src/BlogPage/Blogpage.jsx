@@ -4,6 +4,7 @@ import m from "../Home/mountains.webp";
 import Bg from '../Bg/Bg'
 import axios from 'axios'
 import { Link } from "react-router-dom";
+import baseUrl from "../baseUrl";
 function Blogpage() {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -13,7 +14,7 @@ function Blogpage() {
     useEffect(() => {
       const fetchBlogs = async () => {
         try {
-          const response = await axios.get('http://localhost:5000/api/blog/getallblogs'); // Replace with your actual API URL
+          const response = await axios.get(`${baseUrl}/api/blog/getallblogs`); // Replace with your actual API URL
           setBlogs(response.data); // Set the blogs data
           console.log(response.data)
         } catch (err) {
@@ -48,7 +49,7 @@ function Blogpage() {
           {blog.imageUrl ? (
                     <img
                       className="blog-page-pic"
-                      src={`http://localhost:5000/${blog.imageUrl}`}
+                      src={`${baseUrl}/${blog.imageUrl}`}
                       alt='img'
                     />
                   ) : (

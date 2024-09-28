@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./ModifyTour.css";
 import NewTour from "./NewTour"; // Adjust the path based on your project structure
+import baseUrl from "../baseUrl";
 
 function ModifyTour() {
   const [tours, setTours] = useState([]);
@@ -13,7 +14,7 @@ function ModifyTour() {
   // Function to fetch all tours
   const fetchTours = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/tours"); // Adjust endpoint if needed
+      const response = await axios.get(`${baseUrl}/api/tours`); // Adjust endpoint if needed
       console.log(response.data); // Optional: Remove in production
       setTours(response.data.tours); // Corrected to access 'tours' array
       setError(null);
@@ -34,7 +35,7 @@ function ModifyTour() {
     if (!window.confirm("Are you sure you want to delete this tour?")) return;
 
     try {
-      const response = await axios.delete(`http://localhost:5000/api/tours/${tourId}`);
+      const response = await axios.delete(`${baseUrl}/api/tours/${tourId}`);
       if (response.status === 200) {
         alert("Tour deleted successfully!");
         fetchTours(); // Refresh the tours list

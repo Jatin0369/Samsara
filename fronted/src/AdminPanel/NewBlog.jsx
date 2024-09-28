@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./NewBlog.css";
+import baseUrl from "../baseUrl";
 
 function NewBlog() {
   // State for each form field
@@ -42,7 +43,7 @@ function NewBlog() {
     }
 
     try {
-      const response = await fetch('http://localhost:5000/api/blog/createblog', {
+      const response = await fetch(`${baseUrl}/api/blog/createblog`, {
         method: 'POST',
         body: formData, // Send formData, not JSON
       });

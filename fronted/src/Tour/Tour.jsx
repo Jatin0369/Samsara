@@ -3,6 +3,7 @@ import { useLocation, Link } from "react-router-dom"; // Import Link
 import Bg from "../Bg/Bg";
 import "./Tour.css";
 import axios from "axios";
+import baseUrl from "../baseUrl";
 
 function Tour() {
   const [sliderValue, setSliderValue] = useState(1000);
@@ -89,7 +90,7 @@ function Tour() {
 
         console.log("Fetching tours with params:", params); // Log params
 
-        const response = await axios.get("http://localhost:5000/api/tours", { params });
+        const response = await axios.get(`${baseUrl}/api/tours`, { params });
         console.log("Response data:", response.data); // Log response data
 
         setFilteredTours(response.data.tours);
@@ -168,7 +169,7 @@ function Tour() {
                   {tourImage ? (
                     <img
                       className="tour-pic no-underline"
-                      src={`http://localhost:5000/${tourImage}`}
+                      src={`${baseUrl}/${tourImage}`}
                       alt={tour.tourName}
                     />
                   ) : (

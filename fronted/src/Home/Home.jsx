@@ -13,6 +13,7 @@ import people from './people.png'
 import mainMount from './mountains.jpg'
 import beach from './beach.jpg'
 import sky from './sky.jpg'
+import baseUrl from "../baseUrl";
 
 
 
@@ -43,7 +44,7 @@ function Home() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5000/api/tours') // Node.js server URL
+      .get(`${baseUrl}/api/tours`) // Node.js server URL
       .then((response) => {
         setTours(response.data.tours); // Set the response data to state
         console.log(response.data.tours)

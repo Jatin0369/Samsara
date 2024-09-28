@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Login.css";
+import baseUrl from '/src/baseUrl.js'
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -11,7 +12,7 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/api/admin/login", { username, password });
+      const response = await axios.post(`${baseUrl}/api/admin/login`, { username, password });
       console.log("Login admin page response: ", response.data);
 
       // Check for a successful response and a valid admin message

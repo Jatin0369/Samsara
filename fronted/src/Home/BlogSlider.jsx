@@ -7,6 +7,7 @@ import a from './right-arrow.png'
 import m from './mountains.webp'
 import axios from "axios";
 import { Link } from "react-router-dom";
+import baseUrl from "../baseUrl";
 
 
 function BlogSlider() {
@@ -47,7 +48,7 @@ function BlogSlider() {
     useEffect(() => {
       const fetchBlogs = async () => {
         try {
-          const response = await axios.get('http://localhost:5000/api/blog/getallblogs'); // Replace with your actual API URL
+          const response = await axios.get(`${baseUrl}/api/blog/getallblogs`); // Replace with your actual API URL
           setBlogs(response.data); // Set the blogs data
           console.log(response.data)
         } catch (err) {
@@ -84,7 +85,7 @@ function BlogSlider() {
           {blog.imageUrl ? (
                     <img
                       className="blog-pic"
-                      src={`http://localhost:5000/${blog.imageUrl}`}
+                      src={`${baseUrl}/${blog.imageUrl}`}
                       alt='img'
                     />
                   ) : (

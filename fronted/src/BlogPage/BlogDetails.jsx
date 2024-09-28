@@ -4,6 +4,7 @@ import m from "../Home/mountains.webp";
 import "./BlogDetails.css";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import baseUrl from "../baseUrl";
 
 function BlogDetails() {
   const { id } = useParams();
@@ -26,7 +27,7 @@ function BlogDetails() {
     const fetchBlogDetails = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/blog/blogdetail/${id}`
+          `${baseUrl}/api/blog/blogdetail/${id}`
         );
         const blogData = response.data.blog;
         setBlog(blogData); // Set the blog state with the fetched data
@@ -51,7 +52,7 @@ function BlogDetails() {
     const fetchSideBlogs = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/blog/getallblogs"
+          `${baseUrl}/api/blog/getallblogs`
         );
         setSideBlogs(response.data); // Set the blogs data
       } catch (err) {
@@ -109,7 +110,7 @@ function BlogDetails() {
             <div className="side-blog-news" key={blog._id}>
               <img
                 className="blog-detail-page-pic"
-                src={`http://localhost:5000/${blog.imageUrl}`}
+                src={`${baseUrl}/${blog.imageUrl}`}
                 alt="Blog Pic"
               />
               <div className="side-blog-news-content">

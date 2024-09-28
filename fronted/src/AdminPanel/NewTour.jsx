@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./NewTour.css";
 import axios from "axios";
+import baseUrl from "../baseUrl";
 
 function NewTour({ selectedTour, refreshTours, setSelectedTour }) {
   const [images, setImages] = useState([]);
@@ -137,8 +138,8 @@ function NewTour({ selectedTour, refreshTours, setSelectedTour }) {
     });
 
     const url = selectedTour
-      ? `http://localhost:5000/api/updatetour/${selectedTour._id}` // Update existing tour
-      : "http://localhost:5000/api/createnewtour"; // Create new tour
+      ? `${baseUrl}/api/updatetour/${selectedTour._id}` // Update existing tour
+      : `${baseUrl}/api/createnewtour`; // Create new tour
 
     try {
       const response = await axios({
