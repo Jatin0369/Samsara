@@ -37,7 +37,7 @@ function Footer() {
             <ul>
             <Link to="/aboutus" className='no-underline-f'><li>About Us</li></Link>
             <Link to="/tour" className='no-underline-f'><li>Tours</li></Link>
-            <Link to="" className='no-underline-f'><li>Latest Blogs</li></Link>
+            <Link to="/blog" className='no-underline-f'><li>Latest Blogs</li></Link>
                 <Link to="contact" className='no-underline-f'><li>Contact Us</li></Link>
             </ul>
         </div>
@@ -45,8 +45,8 @@ function Footer() {
             <h3>Contact</h3>
             <p>149-R Model Town, New Delhi
             <br /> UT, India.</p>
-            <p>info@travel.com
-            +91 98-76-54-32-10 </p>
+            <Link to="/loginforadminacess" className='no-underline-f'><p>info@travel.com
+            +91 98-76-54-32-10 </p></Link>
         </div>
       </div>
       <div className="social-links"></div>
