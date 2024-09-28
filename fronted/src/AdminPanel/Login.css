@@ -1,0 +1,31 @@
+.login-container{
+    /* border: 1px solid red; */
+    margin: 6vw;
+
+}
+.login-container form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login-container input{
+    margin: 2vw;
+}
+.submit-button-login{
+    margin-top: 0.5vw;
+    width: 5vw;
+    height: 4vh;
+    border-radius: 10px;
+    color: azure;
+    background-color: rgba(189, 132, 25, 0.826);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-family: var(--mainFont);
+}
+.submit-button-login:hover{
+    scale: 1.1;
+    cursor: pointer;
+}

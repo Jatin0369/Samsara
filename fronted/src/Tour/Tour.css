@@ -1,0 +1,141 @@
+.tour-selection-main{
+    display: flex;
+    /* border: 1px solid red; */
+    /* height: 100vh; */
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+}
+.no-underline{
+    text-decoration: none;
+}
+.tour-filter-panel{
+    /* border: 1px solid purple; */
+    width: 25%;
+    margin: 1vw;
+    max-height: 30vw;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+.tour-display {
+    width: 75%;
+    margin: 1vw auto;                 /* Center the tour display container */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;      /* Align all cards to the left */
+    gap: 2vw;                         /* Space between the cards */
+}
+.tour-border-box{
+    /* border: 1px solid red; */
+    margin-block: 1.5vw;
+}
+.tour-border-box p{
+    /* border: 1px solid red; */
+    /* margin: auto; */
+    font-size: 22px;
+}
+.tour-border-box-option{
+    margin: auto;
+    /* border: 0; */
+    width: 20vw;
+    height: 6vh;
+    padding-left: 10px;
+    border: 1px solid rgba(110, 108, 105, 0.708);
+    border-radius: 10px;
+    /* background-color: rgba(187, 183, 183, 0.498); */
+    color: rgb(7, 7, 7);
+    font-size: var(--button-text);
+}
+.tour-line{
+    margin: auto;
+    margin-top: 1vw;
+    width: 20vw;
+    background-color: rgba(110, 108, 105, 0.708);
+    height: 1px;
+}
+.tour-range{
+    width: 18vw;
+    background: #b83b3b;          /* Track color */
+    border-radius: 5px;        /* Rounded corners */
+    outline: none;
+    opacity: 0.7;              /* Slightly transparent */
+    transition: opacity 0.2s;  /* Animation for hover */
+}
+.tour-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;              /* Width of the thumb */
+    height: 20px;             /* Height of the thumb */
+    background: #11ff00;      /* Thumb color */
+    border-radius: 50%;       /* Make it circular */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.tour-card {
+    flex: 0 1 calc(33.33% - 2vw);     /* 3 cards per row with a gap */
+    box-sizing: border-box;           /* Include padding and borders in width */
+    border: 1px solid rgba(110, 108, 105, 0.158);
+    border-radius: 20px;
+    height: 60vh;
+    margin: 0;                        /* Remove margin from individual cards */
+    display: flex;
+    flex-direction: column;
+    background-color:  #ebeef036;
+    /* align-items: start; */
+}
+.tour-card:hover{
+    border: 1px solid black;
+    border-top: 0;
+}
+.tour-pic{
+    /* object-fit: fill; */
+    width: 100%;
+    height: 45%;
+    margin: auto;
+    margin-top: 0;
+    border-radius: 20px;
+    transition: box-shadow 0.4s ease; /* Smooth transition effect */
+}
+.tour-pic:hover{
+    box-shadow: 2px 5px 10px;
+}
+.content-tour-box{
+    /* border: 1px solid red; */
+    /* height: auto; */
+    height: 55%;
+}
+.tour-place{
+    color: rgba(110, 108, 105, 0.708);
+    font-size: 1.5vw;
+    margin: 0.5vw;
+    margin-top: 1vw;
+}
+.tour-name{
+    margin: 0.5vw;
+    font-size: 3vw;
+    font-weight: 900;
+    text-shadow: 1px 1px rgb(8, 12, 86);
+    color:  #7291A1;
+}
+.tour-price{
+    font-size: 28px;
+    margin: 0.5vw;
+    margin-top: 1vw;
+}
+.tour-rating{
+    font-size: 24px;
+    margin: 0.5vw;
+    margin-top: 1vw;
+}
+.tour-duration{
+    font-size: 22px;
+    margin: 0.5vw;
+    margin-top: 1vw;
+}
+.tour-description{
+    font-size: 22px;
+    margin: 0.5vw;
+    margin-top: 1vw;
+    color: rgba(110, 108, 105, 0.708);
+}

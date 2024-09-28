@@ -1,0 +1,30 @@
+
+.about-content{
+    width: 70%;
+    margin: auto;
+}
+.about-content p{
+    font-size: 22px;
+    line-height: 1.2;
+}
+.about-content h4{
+    font-size: 32px;
+}
+.about-content li{
+    list-style: none;
+    font-size: 22px;
+    line-height: 1.5;
+}
+.name{
+    font-size: 38px;
+    color: red;
+    /* font-weight: 900; */
+}
+.define{
+    font-size: 26px;
+    text-decoration: underline;
+}
+.blog-container-about{
+    width: 95%;
+    margin: 2vw auto;
+}

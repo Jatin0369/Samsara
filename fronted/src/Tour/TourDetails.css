@@ -1,0 +1,184 @@
+/* .tourdetails-outer{
+    border: 1px solid orange;
+} */
+.tourdetails-outer-2{
+    display: flex;
+    margin-bottom: 10vw;
+}
+.tourdetails-info{
+    width: 60%;
+    margin: auto;
+    /* border: 1px solid red; */
+    margin-top: 5vw;
+    margin-left: 5vw;
+}
+.floating-menu{
+    margin: auto;
+    margin-top: 5vw;
+    margin-left: 0vw;
+    width: 25%;
+    /* height: 30vh; */
+    position: sticky;
+    top: 1vw;
+    /* border: 1px solid palevioletred; */
+}
+.tourdetails-short-info{
+    display: flex;
+    flex-wrap: wrap; /* Ensures the boxes wrap to the next line */
+    gap: 2vw; /* Space between the boxes */
+    justify-content: flex-start; /* Align items to the start of each row */
+}
+.language-info{
+    flex: 0 1 calc(25% - 2vw); /* Each box takes 25% of the row minus gap */
+  box-sizing: border-box; /* Include padding and border in the box size */
+  /* Additional styling for box size and appearance */
+}
+.small-text{
+    color: rgba(110, 108, 105, 0.708);
+    font-size: 18px;
+    margin: 0.5vw;
+}
+.main-text{
+    margin: 0.5vw;
+    font-size: 36px;
+    font-weight: 900;
+    /* text-shadow: 1px 1px black; */
+}
+.info-heading{
+    font-size: 32px;
+    padding: 1vw;
+}
+.tourdetails-detail p{
+    font-size: 22px;
+    line-height: 1.2;
+    padding: 1vw;
+}
+.tourdetails-detail li{
+    /* list-style: none; */
+    font-size: 22px;
+    line-height: 1.5;
+}
+.question-name{
+    font-size: 26px;
+    padding: 0;
+}
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 0;
+    /* margin-bottom: 10px; */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    height: auto;
+  }
+  
+  .card-header {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7f7f7;
+  }
+  
+  .card-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 15px;
+  }
+  
+  .card-content.open {
+    max-height: 250px; /* Adjust based on your content */
+    padding: 15px;
+  }
+  
+  .card-content.collapsed {
+    max-height: 0;
+    padding: 0 15px;
+  }
+  .top-banner{
+    height: 80px;
+    background-color: rgba(189, 132, 25, 0.826);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    display: flex;
+    align-items: center;
+  }
+  .top-banner p{
+    font-size: 28px;
+    color: white;
+    margin: 1vw;
+  }
+  .bottom-banner{
+    height: 80px;
+    background-color: rgba(189, 132, 25, 0.826);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+  .form-detail-tourdetail{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+.custom-input-tourdetail{
+        width: 90%;
+        height: 5vh;
+        border: 1px solid rgba(128, 128, 128, 0.244);
+        font-size: 22px;
+        margin: 0.5vw;
+}
+.custom-input-tourdetail-quantity{
+        width: 40%;
+        height: 5vh;
+        border: 1px solid rgba(128, 128, 128, 0.244);
+        font-size: 22px;
+        margin: 0.5vw;
+}
+.custom-input-tourdetail-date{
+        width: 113%;
+        height: 5vh;
+        border: 1px solid rgba(128, 128, 128, 0.244);
+        font-size: 22px;
+        margin: 0.5vw;
+}
+.custom-input-tourdetail:focus, .custom-input-tourdetail-date:focus{
+    outline: none;
+    border: 1px solid  rgba(189, 132, 25, 0.826);
+}
+.date-label{
+    font-size: 22px;
+    /* color: white; */
+    margin: 1vw;
+    padding-top: 2vw;
+}
+.quantity{
+    display: flex;
+    align-items: center;
+}
+.quantity-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.total-quantity{
+    width: 45%;
+    /* border: 1px solid red; */
+    margin: 2vw auto;
+    font-size: 22px;
+}
+.inquiry-button-tourdetail{
+    margin: auto;
+    /* border: 1px solid orange; */
+    width: 12vw;
+    height: 6vh;
+    border-radius: 20px;
+    color: white;
+    background-color: rgba(189, 132, 25, 0.826);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--button-text);
+    font-family: var(--mainFont);
+    margin-bottom: 2vw;
+}

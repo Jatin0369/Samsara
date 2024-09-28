@@ -1,0 +1,34 @@
+.new-blog-info-box{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid rgba(128, 128, 128, 0.244);
+    width: 50%;
+    margin: auto;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+}
+.new-blog-info-box h3{
+    margin: 1vw;
+    font-size: 1.5vw;
+}
+.key-value-input-heading{
+    margin: 1vw;
+    font-size: 22px;
+    border: 1px solid rgba(128, 128, 128, 0.244);
+}
+.submit-button-new-blog{
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    width: 8vw;
+    height: 5vh;
+    border-radius: 10px;
+    color: azure;
+    background-color: rgba(189, 132, 25, 0.826);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-family: var(--mainFont);
+}
+

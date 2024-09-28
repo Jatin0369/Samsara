@@ -1,0 +1,42 @@
+/* ModifyTour.css */
+
+.modify-tour-container {
+    padding: 20px;
+  }
+  
+  .tour-table-container {
+    margin-bottom: 40px;
+  }
+  
+  .tour-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .tour-table th,
+  .tour-table td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .tour-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .tour-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .tour-table button {
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .new-modify-tour-section {
+    margin-top: 40px;
+  }
+  
+  .error {
+    color: red;
+  }
+  

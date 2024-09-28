@@ -1,0 +1,46 @@
+:root{
+    --mainFont: Gruppo;
+}
+.navbar-container{
+    position: sticky;   
+}
+.outer-container{
+    position: sticky;
+    /* border: 1px solid red; */
+    display: flex;
+    margin-top: 32px;
+}
+.outer-container p{
+    /* border: 1px solid red; */
+    margin: auto;
+    font-family: var(--mainFont);
+    font-weight: 900;
+    font-size: 2vw;
+}
+.navbar-line{
+    width: 80%;
+    margin: auto;
+    margin-top: 1vw;
+    height: 1px;
+    background-color: black;
+}
+.no-underline{
+    text-decoration: none;
+    color: black;
+}
+.outer-container ul{
+    display: flex;
+    /* border: 1px solid black; */
+    justify-content: space-between;
+    list-style: none;
+    margin: auto;
+    min-width: 50%;
+    font-family: var(--mainFont);
+    font-weight: 700;
+    font-size: 1.5vw;
+}
+.outer-container ul li:hover{
+    color: gray;
+    transform: scale(1.1);
+    transition: ease-in-out 400ms;
+}

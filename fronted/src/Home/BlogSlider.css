@@ -1,0 +1,33 @@
+.blog-slider-container-outermost{
+    width: 95%;
+    margin: auto;
+}
+.card{
+    /* border: 1px solid rgb(0, 85, 255); */
+    height: 60vh;
+    margin: 1vw;
+    width: 90% !important;
+    padding: 1vw;
+    /* gap: 20px !important; */
+    object-fit: contain;
+    transition: background-color 0.4s ease; /* Smooth transition effect */
+}
+.card:hover{
+    cursor: pointer;
+    color: gray;
+}
+.blog-pic{
+    object-fit: contain;
+    width: 100%;
+    margin: auto;
+    border-radius: 20px;
+    transition: box-shadow 0.4s ease; /* Smooth transition effect */
+}
+.blog-pic:hover{
+    box-shadow: 2px 5px 10px;
+}
+.card p{
+    line-height: 1.1;
+    font-size: var(--para-text);
+    
+}
